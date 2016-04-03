@@ -1,0 +1,61 @@
+<component name="libraryTable">
+  <library name="SSH">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/SSHlib/antlr-2.7.7.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/asm-3.3.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/asm-commons-3.3.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/asm-tree-3.3.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/aspectjrt.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/aspectjtools.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/aspectjweaver.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/classmate-1.3.0.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/com.springsource.org.aopalliance-1.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/commons-dbcp2-2.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/commons-fileupload-1.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/commons-io-2.2.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/commons-lang3-3.2.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/commons-logging-1.2.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/commons-pool2-2.4.2.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/freemarker-2.3.22.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/geronimo-jta_1.1_spec-1.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/hibernate-commons-annotations-5.0.1.Final.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/hibernate-core-5.1.0.Final.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/jandex-2.0.0.Final.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/javassist-3.11.0.GA.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/javassist-3.20.0-GA.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/jboss-logging-3.3.0.Final.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/log4j-api-2.2.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/log4j-core-2.2.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/mysql-connector-java-5.1.34-bin.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/ognl-3.0.6.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/org.aspectj.matcher.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-aop-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-aspects-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-beans-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-context-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-context-support-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-core-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-expression-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-instrument-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-instrument-tomcat-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-jdbc-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-jms-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-messaging-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-orm-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-oxm-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-test-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-tx-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-web-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-webmvc-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-webmvc-portlet-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/spring-websocket-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/struts2-core-2.3.24.1.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/struts2-spring-plugin-2.3.24.1.jar!/" />
+      <root url="jar://$USER_HOME$/SSHlib/xwork-core-2.3.24.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
