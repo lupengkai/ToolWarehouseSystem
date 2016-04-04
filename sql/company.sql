@@ -1,0 +1,9 @@
+insert into Company VALUES (null, 'head');
+insert into Company VALUES (null, 'branch1');
+insert into Company VALUES (null, 'branch2');
+insert into Company VALUES (null, 'branch3');
+insert into Company VALUES (null, 'branch4');
+insert into Company VALUES (null, 'branch5');
+insert into Company VALUES (null, 'branch6');
+insert into Company VALUES (null, 'branch7');
+insert into Company VALUES (null, 'branch8');

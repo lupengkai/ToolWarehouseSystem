@@ -12,15 +12,16 @@ import java.util.List;
  */
 @Entity
 public class Employee extends Staff{
-    private Department department;
+    private DepartmentType departmentType;
 
 
-@ManyToOne
-    public Department getDepartment() {
-        return department;
+
+
+    public DepartmentType getDepartmentType() {
+        return departmentType;
     }
 
-    public void setDepartment(Department department) {
-        this.department = department;
+    public void setDepartmentType(DepartmentType departmentType) {
+        this.departmentType = departmentType;
     }
 }

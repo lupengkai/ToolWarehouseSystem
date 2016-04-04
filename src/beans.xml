@@ -38,6 +38,23 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
         <property name="userDao" ref="userDAO"/>
     </bean>
 -->
+    <bean name="staffManager" class="com.fastrepair.service.StaffManager">
+        <property name="staffDao" ref="staffDao"/>
+    </bean>
+
+    <bean name="staffDao" class="com.fastrepair.dao.impl.StaffDaoImpl">
+    </bean>
+
+
+    <bean name="companyDao" class="com.fastrepair.dao.impl.CompanyDaoImpl">
+    </bean>
+
+
+    <bean name="companyManager" class="com.fastrepair.service.CompanyManager">
+        <property name="companyDao" ref="companyDao"/>
+    </bean>
+
+
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="packagesToScan">    <!-- hibernate map-->
@@ -51,7 +68,7 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
                     org.hibernate.dialect.MySQLDialect
                 </prop>
                 <prop key="hibernate.show_sql">true</prop>
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
             </props>
         </property>
     </bean>
@@ -76,6 +93,10 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
         <tx:attributes>
             <tx:method name="exists" read-only="true"/>
             <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="validate*" propagation="REQUIRED"/>
+
         </tx:attributes>
     </tx:advice>
 </beans>

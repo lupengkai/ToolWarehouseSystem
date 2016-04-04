@@ -12,7 +12,18 @@ import java.util.List;
 public class Staff {
     private int id;
     private String name;
+    private String password;
     private List<Tool> tools = new ArrayList<>();
+    private Company company;
+
+@ManyToOne
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
 
     @OneToMany(mappedBy = "staff")
     public List<Tool> getTools() {
@@ -41,5 +52,11 @@ public class Staff {
         this.name = name;
     }
 
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

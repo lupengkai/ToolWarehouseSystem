@@ -8,6 +8,7 @@ import javax.persistence.*;
  * Created by tage on 4/3/16.
  */
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Tool {
     private int id;
     private String name;

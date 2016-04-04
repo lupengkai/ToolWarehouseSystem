@@ -8,14 +8,5 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class Specialist extends Staff {
-    private Company company;
 
-    @ManyToOne
-    public Company getCompany() {
-        return company;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
 }

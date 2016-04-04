@@ -6,23 +6,103 @@
 
 <struts>
 
-    <constant name="struts.devMode" value="true" />
+    <constant name="struts.devMode" value="true"/>
     <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
     <constant name="struts.custom.i18n.resources" value="GBK"/>
     <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
 
     <package name="default" namespace="/" extends="struts-default">
 
+        <default-action-ref name="index"></default-action-ref>
 
-    <default-action-ref name="index"></default-action-ref>
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <action name="Login_input">
+            <result>/Login_input.jsp</result>
+        </action>
+
+        <action name="Login_login" class="com.fastrepair.action.StaffLoginAction" method="login">
+            <result name="success">/admin.jsp</result>
+            <result name="fail">/Login_fail.jsp</result>
+        </action>
 
 
-    <action name="index">
-        <result>/index.jsp </result>
-    </action>
+        <action name="Login_register_register" class="com.fastrepair.action.StaffRegisterAction">
+            <result name="success">/registerOk.jsp</result>
+            <result name="fail">/registerFail.jsp</result>
+        </action>
+
+        <action name="Login_register_input" class="com.fastrepair.action.StaffRegisterInputAction">
+            <result>/Staff_register_input.jsp</result>
+        </action>
+
+        <action name="Staff_info" class="com.fastrepair.action.StaffInfoAction">
+            <result name="success">/Staff_info.jsp</result>
+        </action>
 
 
+        <action name="Login_admin_input">
+            <result>
+                /admin/Login_input.jsp
+            </result>
+        </action>
 
+        <action name="Login_admin_login" class="com.fastrepair.action.AdminLoginAction">
+            <result name="success">/admin/admin.jsp</result>
+            <result name="fail">/admin/Login_input.jsp</result>
+        </action>
+    </package>
+
+
+    <package name="ETMS" namespace="/ETMS" extends="struts-default">
+        <action name="Expensivetools_show">
+            <result>
+                /ExpensiveTools_show.jsp
+            </result>
+        </action>
+        <action name="Inexpensivetools_show">
+            <result>
+                /InexpensiveTools_show.jsp
+            </result>
+        </action>
+        <action name="Expensivetools_request">
+            <result>
+                /Expensivetools_request.jsp
+            </result>
+        </action>
 
     </package>
+
+
+    <package name="WMS" namespace="/WMS" extends="struts-default">
+        <action name="Expensivetools_manage">
+            <result>
+                /admin/Expensivetools_manage.jsp
+            </result>
+        </action>
+
+        <action name="Inexpensivetools_manage">
+            <result>
+                /admin/Inexpensivetools_manage.jsp
+            </result>
+
+        </action>
+        <action name="Expensivetools_lend">
+            <result>
+                /admin/Expensivetools_lend.jsp
+            </result>
+
+        </action>
+
+        <action name="Inexpensivetools_lend">
+            <result>
+                /admin/Inexpensivetools_lend.jsp
+            </result>
+
+        </action>
+    </package>
+
+
 </struts>
