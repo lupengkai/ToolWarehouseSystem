@@ -77,6 +77,29 @@
 
 
     <package name="WMS" namespace="/WMS" extends="struts-default">
+        
+        <action name="tools" class="com.fastrepair.action.ToolsListAction">
+            <result>
+                /admin/tools_list.jsp
+            </result>
+        </action>
+
+
+        <action name="tools_add_input" class="com.fastrepair.action.ToolAddInputAction">
+            <result>
+                /admin/tools_add_input.jsp
+            </result>
+        </action>
+        
+        <action name="tools_add" class="com.fastrepair.action.ToolAddAction">
+            <result>
+                /admin/tools_add_ok.jsp
+            </result>
+        </action>
+        
+        
+        
+        
         <action name="Expensivetools_manage">
             <result>
                 /admin/Expensivetools_manage.jsp
@@ -87,8 +110,9 @@
             <result>
                 /admin/Inexpensivetools_manage.jsp
             </result>
-
         </action>
+
+
         <action name="Expensivetools_lend">
             <result>
                 /admin/Expensivetools_lend.jsp
@@ -100,9 +124,10 @@
             <result>
                 /admin/Inexpensivetools_lend.jsp
             </result>
-
         </action>
     </package>
+
+
 
 
 </struts>

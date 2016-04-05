@@ -27,22 +27,23 @@
 <div id="content">
     <div class="left_menu">
         <ul id="nav_dot">
-            <li>
-                <h4 class="M1"><span></span>Mangement</h4>
-                <div class="list-item none">
-                    <a href="/WMS/Expensivetools_manage" target="menuFrame">Inexpensive</a>
-                    <a href="/WMS/Inexpensivetools_manage" target="menuFrame">Expensive</a>
-                </div>
-            </li>
-            <li>
-                <h4 class="M2"><span></span>Lend</h4>
-                <div class="list-item none">
-                    <a href="/WMS/Expensivetools_lend" target="menuFrame">Inexpensive</a>
-                    <a href="/WMS/Inexpensivetools_lend" target="menuFrame">Expensive</a>
-                </div>
-            </li>
+            <s:iterator value="allCompanies">
+
+                <li>
+                    <h4 class="M1"><span></span><s:property value="name"/></h4>
+                    <div class="list-item none">
+                        <a href="/WMS/tools?company=<s:property value="id"/>&&department=CONSTRUCTDEVICE" target="menuFrame">CONSTRUCTIONDEVICE</a>
+                        <a href="/WMS/tools?company=<s:property value="id"/>&&department=AUTOMOBILE" target="menuFrame">AUTOMOBILE</a>
+                        <a href="/WMS/tools?company=<s:property value="id"/>&&department=APPLIANCE" target="menuFrame">APPLIANCE</a>
+                        <a href="/WMS/tools?company=<s:property value="id"/>&&department=COMPUTER" target="menuFrame">COMPUTER</a>
+                    </div>
+                </li>
+
+            </s:iterator>
+
 
         </ul>
+        <s:debug/>
     </div>
     <div class="m-right">
         <%--<div class="right-nav">
@@ -62,7 +63,8 @@
 </div>
 <div class="bottom"></div>
 <div id="footer"><p>FastRepair
-</p></div>
+</p>
+</div>
 <script>navList(12);</script>
 </body>
 </html>

@@ -30,14 +30,14 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
     </bean>
 
 
- <!--   <bean name="userDAO" class="com.tage.registration.dao.impl.UserDaoImpl">
-        <property name="hibernateTemplate" ref="hibernateTemplate"/>
-    </bean>
+    <!--   <bean name="userDAO" class="com.tage.registration.dao.impl.UserDaoImpl">
+           <property name="hibernateTemplate" ref="hibernateTemplate"/>
+       </bean>
 
-    <bean name="userManager" class="com.tage.registration.service.impl.UserManagerImpl">
-        <property name="userDao" ref="userDAO"/>
-    </bean>
--->
+       <bean name="userManager" class="com.tage.registration.service.impl.UserManagerImpl">
+           <property name="userDao" ref="userDAO"/>
+       </bean>
+   -->
     <bean name="staffManager" class="com.fastrepair.service.StaffManager">
         <property name="staffDao" ref="staffDao"/>
     </bean>
@@ -52,6 +52,29 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <bean name="companyManager" class="com.fastrepair.service.CompanyManager">
         <property name="companyDao" ref="companyDao"/>
+    </bean>
+    <bean name="departmentDao" class="com.fastrepair.dao.impl.DepartmentDaoImpl">
+    </bean>
+
+
+    <bean name="departmentManager" class="com.fastrepair.service.DepartmentManager">
+        <property name="departmentDao" ref="departmentDao"/>
+    </bean>
+
+
+    <bean name="expensiveToolDao" class="com.fastrepair.dao.impl.ExpensiveToolDaoImpl">
+    </bean>
+
+
+    <bean name="expensiveToolManager" class="com.fastrepair.service.ExpensiveToolManager">
+        <property name="expensiveToolDao" ref="expensiveToolDao"/>
+    </bean>
+ <bean name="inexpensiveToolDao" class="com.fastrepair.dao.impl.InexpensiveToolDaoImpl">
+    </bean>
+
+
+    <bean name="inexpensiveToolManager" class="com.fastrepair.service.InexpensiveToolManager">
+        <property name="inexpensiveToolDao" ref="inexpensiveToolDao"/>
     </bean>
 
 

@@ -32,6 +32,7 @@ public class ExpensiveToolsManageAction extends ActionSupport{
 
     @Override
     public String execute() throws Exception {
-        return super.execute();
+        expensiveTools = expensiveToolManager.getAllExpensiveTools();
+        return SUCCESS;
     }
 }

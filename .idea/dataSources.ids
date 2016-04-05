@@ -110,117 +110,113 @@
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="34" parent="7" name="DTYPE">
-        <mandatory>1</mandatory>
-        <data-type>varchar(31)</data-type>
-      </column>
-      <column id="35" parent="7" name="id">
+      <column id="34" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="36" parent="7" name="name">
+      <column id="35" parent="7" name="name">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="37" parent="7" name="price">
+      <column id="36" parent="7" name="price">
         <mandatory>1</mandatory>
         <data-type>double</data-type>
       </column>
-      <column id="38" parent="7" name="toolState">
+      <column id="37" parent="7" name="toolState">
         <data-type>int(11)</data-type>
       </column>
-      <column id="39" parent="7" name="department_id">
+      <column id="38" parent="7" name="department_id">
         <data-type>int(11)</data-type>
       </column>
-      <column id="40" parent="7" name="staff_id">
+      <column id="39" parent="7" name="staff_id">
         <data-type>int(11)</data-type>
       </column>
-      <index id="41" parent="7" name="FK3isxv1ewg5pcosxrjeqfheqx4">
+      <index id="40" parent="7" name="FK3isxv1ewg5pcosxrjeqfheqx4">
         <columns>staff_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="42" parent="7" name="FKch6bub2kxgh2b4sktuvmfmhl8">
+      <index id="41" parent="7" name="FKch6bub2kxgh2b4sktuvmfmhl8">
         <columns>department_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="43" parent="7" name="PRIMARY">
+      <key id="42" parent="7" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="44" parent="7" name="FK3isxv1ewg5pcosxrjeqfheqx4">
+      <foreign-key id="43" parent="7" name="FK3isxv1ewg5pcosxrjeqfheqx4">
         <columns>staff_id</columns>
         <ref-key>~.Staff.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="45" parent="7" name="FKch6bub2kxgh2b4sktuvmfmhl8">
+      <foreign-key id="44" parent="7" name="FKch6bub2kxgh2b4sktuvmfmhl8">
         <columns>department_id</columns>
         <ref-key>~.Department.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="46" parent="8" name="id">
+      <column id="45" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="47" parent="8" name="operationType">
+      <column id="46" parent="8" name="operationType">
         <data-type>int(11)</data-type>
       </column>
-      <column id="48" parent="8" name="timestamp">
+      <column id="47" parent="8" name="timestamp">
         <data-type>datetime</data-type>
       </column>
-      <column id="49" parent="8" name="staff_id">
+      <column id="48" parent="8" name="staff_id">
         <data-type>int(11)</data-type>
       </column>
-      <column id="50" parent="8" name="tool_id">
+      <column id="49" parent="8" name="tool_id">
         <data-type>int(11)</data-type>
       </column>
-      <index id="51" parent="8" name="FKd7dq1vddm741dlqdej1btw36m">
+      <index id="50" parent="8" name="FKd7dq1vddm741dlqdej1btw36m">
         <columns>tool_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="52" parent="8" name="FKnagcsy16c95gchl0hmvartvco">
+      <index id="51" parent="8" name="FKnagcsy16c95gchl0hmvartvco">
         <columns>staff_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="53" parent="8" name="PRIMARY">
+      <key id="52" parent="8" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="54" parent="8" name="FKd7dq1vddm741dlqdej1btw36m">
+      <foreign-key id="53" parent="8" name="FKd7dq1vddm741dlqdej1btw36m">
         <columns>tool_id</columns>
         <ref-key>~.Tool.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="55" parent="8" name="FKnagcsy16c95gchl0hmvartvco">
+      <foreign-key id="54" parent="8" name="FKnagcsy16c95gchl0hmvartvco">
         <columns>staff_id</columns>
         <ref-key>~.Staff.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="56" parent="9" name="id">
+      <column id="55" parent="9" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="57" parent="9" name="PRIMARY">
+      <key id="56" parent="9" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="58" parent="9" name="FK3r8tho8ed27t9kf1t58m4o6ga">
+      <foreign-key id="57" parent="9" name="FK3r8tho8ed27t9kf1t58m4o6ga">
         <columns>id</columns>
         <ref-key>~.Tool.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="59" parent="10" name="id">
+      <column id="58" parent="10" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="60" parent="10" name="PRIMARY">
+      <key id="59" parent="10" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="61" parent="10" name="FKpgiw92efhvs1qxhgfws8dbml5">
+      <foreign-key id="60" parent="10" name="FKpgiw92efhvs1qxhgfws8dbml5">
         <columns>id</columns>
         <ref-key>~.Tool.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>

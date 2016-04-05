@@ -2,6 +2,8 @@ package com.fastrepair.service;
 
 import com.fastrepair.dao.DepartmentDao;
 import com.fastrepair.model.Company;
+import com.fastrepair.model.Department;
+import com.fastrepair.util.DepartmentType;
 
 import java.util.List;
 
@@ -19,5 +21,14 @@ public class DepartmentManager {
 
     public void setDepartmentDao(DepartmentDao departmentDao) {
         this.departmentDao = departmentDao;
+    }
+
+    public Department loadByCompanyIdAndType(int id, DepartmentType departmentType) {
+        return departmentDao.loadByCompanyIdAndType(id,departmentType);
+    }
+
+
+    public Department load(int id) {
+        return departmentDao.load(id);
     }
 }
