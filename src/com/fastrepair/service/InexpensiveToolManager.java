@@ -3,6 +3,7 @@ package com.fastrepair.service;
 import com.fastrepair.dao.InexpensiveToolDao;
 import com.fastrepair.model.Department;
 import com.fastrepair.model.InexpensiveTool;
+import com.fastrepair.model.Tool;
 
 import java.util.List;
 
@@ -28,5 +29,9 @@ public class InexpensiveToolManager {
 
     public void add(InexpensiveTool inexpensiveTool) {
         inexpensiveToolDao.add(inexpensiveTool);
+    }
+
+    public List<InexpensiveTool> getStaffTools(int staffid) {
+        return inexpensiveToolDao.getStaffTools(staffid);
     }
 }

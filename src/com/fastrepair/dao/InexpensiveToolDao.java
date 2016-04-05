@@ -12,4 +12,6 @@ public interface InexpensiveToolDao {
    public  List<InexpensiveTool> getDepartmentTool(Department department) ;
 
    public   void add(InexpensiveTool inexpensiveTool);
+
+  public  List<InexpensiveTool> getStaffTools(int staffid);
 }

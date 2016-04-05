@@ -67,7 +67,12 @@
                 <s:property value="staff.name"/>
             </td>
             <td>
-                <a href="/WMS/validate">register</a>
+                <s:if test='toolState.toString() == "FREE"'>
+                <a href="/WMS/manage/register?toolid=<s:property value="id"/>">register</a>
+                </s:if>
+                <s:if test='toolState.toString() == "FREE" || toolState.toString() == "DAMAGED"'>
+                <a href="/WMS/manage/delete?toolid=<s:property value="id"/>">delete</a>
+                </s:if>
             </td>
         </tr>
     </s:iterator>
@@ -105,7 +110,9 @@
                 <s:property value="staff.name"/>
             </td>
             <td>
-                <a href="/WMS/validate">register</a>
+                <s:if test='toolState.toString() == "REQUESTING"'>
+                <a href="/WMS/manage/lend?toolid=<s:property value="id"/>">lend</a>
+                </s:if>
             </td>
         </tr>
     </s:iterator>

@@ -13,5 +13,8 @@ public interface ExpensiveToolDao {
 
     public void add(ExpensiveTool expensiveTool);
 
-    List<ExpensiveTool> getDepartmentTool(Department department);
+    public List<ExpensiveTool> getDepartmentTool(Department department);
+
+   public boolean isRequestStaff(int staffid,int tooid);
+    public List<ExpensiveTool> getStaffTools(int staffid) ;
 }

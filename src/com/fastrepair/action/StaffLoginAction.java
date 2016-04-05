@@ -18,9 +18,20 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by tage on 4/3/16.
  */
-public class StaffLoginAction extends ActionSupport implements ModelDriven{
+public class StaffLoginAction extends ActionSupport implements ModelDriven {
     private StaffLoginInfo staffLoginInfo = new StaffLoginInfo();
     private StaffManager staffManager;
+
+
+    public Staff getStaff() {
+        return staff;
+    }
+
+    public void setStaff(Staff staff) {
+        this.staff = staff;
+    }
+
+    private Staff staff;
 
     public StaffLoginInfo getStaffLoginInfo() {
         return staffLoginInfo;
@@ -42,19 +53,18 @@ public class StaffLoginAction extends ActionSupport implements ModelDriven{
     public String login() throws Exception {
 
 
-
         Staff staff = new Staff();
         staff.setName(staffLoginInfo.getUsername());
         staff.setPassword(staffLoginInfo.getPassword());
         if (staffManager.validate(staff)) {
             HttpServletRequest request = ServletActionContext.getRequest();
             request.getSession().setAttribute("username", staffLoginInfo.getUsername());
-
+            this.staff = staffManager.loadByName(staffLoginInfo.getUsername());
+            System.out.println(staff.getId());
             return SUCCESS;
         } else {
             return "fail";
         }
-
 
 
     }

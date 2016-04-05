@@ -198,25 +198,38 @@
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="56" parent="9" name="PRIMARY">
+      <column id="56" parent="9" name="requestStaff_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="57" parent="9" name="FKhon2mtik3olvuuidrliwku0i1">
+        <columns>requestStaff_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="58" parent="9" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="57" parent="9" name="FK3r8tho8ed27t9kf1t58m4o6ga">
+      <foreign-key id="59" parent="9" name="FK3r8tho8ed27t9kf1t58m4o6ga">
         <columns>id</columns>
         <ref-key>~.Tool.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="58" parent="10" name="id">
+      <foreign-key id="60" parent="9" name="FKhon2mtik3olvuuidrliwku0i1">
+        <columns>requestStaff_id</columns>
+        <ref-key>~.Staff.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="61" parent="10" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <key id="59" parent="10" name="PRIMARY">
+      <key id="62" parent="10" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="60" parent="10" name="FKpgiw92efhvs1qxhgfws8dbml5">
+      <foreign-key id="63" parent="10" name="FKpgiw92efhvs1qxhgfws8dbml5">
         <columns>id</columns>
         <ref-key>~.Tool.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>

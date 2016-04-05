@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: tage
@@ -30,6 +31,38 @@
 </head>
 
 <body>
-Inexpensive Tools
+<h4>Inexpensive Tool</h4>
+<table border="2">
+    <tr>
+        <th>
+            id
+        </th>
+        <th>name</th>
+        <th>price</th>
+        <th>Operation</th>
+    </tr>
+    <s:iterator value="inexpensiveTools">
+        <tr>
+            <td>
+                <s:property value="id"/>
+            </td>
+            <td>
+                <s:property value="name"/>
+            </td>
+            <td>
+                <s:property value="price"/>
+            </td>
+
+
+
+
+            <td>
+                    <a href="/WMS/manage/delete?toolid=<s:property value="id"/>">Cancellation</a>
+            </td>
+        </tr>
+    </s:iterator>
+</table>
+
+<s:debug/>
 </body>
 </html>

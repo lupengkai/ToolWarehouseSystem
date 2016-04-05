@@ -2,8 +2,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: tage
-  Date: 4/3/16
-  Time: 10:48 PM
+  Date: 4/5/16
+  Time: 7:30 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
@@ -31,29 +31,34 @@
 </head>
 
 <body>
-<h4>Inexpensive Tool</h4>
-<table border="2">
-    <tr>
-        <th>
-            id
-        </th>
-        <th>name</th>
-        <th>price</th>
-    </tr>
-    <s:iterator value="expensiveTools">
+
+<form action="/WMS/tools_register" method="post">
+    <input type="hidden" name="toolid" value="<s:property value="toolid"/>">
+    <table>
         <tr>
             <td>
-                <s:property value="id"/>
+                User Name:
             </td>
             <td>
-                <s:property value="name"/>
-            </td>
-            <td>
-                <s:property value="price"/>
+                <input type="text" name="username"/>
             </td>
         </tr>
-    </s:iterator>
-</table>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input type="password" name="password"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2"> <input type="submit"value="register"> </td>
+        </tr>
+    </table>
+</form>
+
+
 
 <s:debug/>
 </body>

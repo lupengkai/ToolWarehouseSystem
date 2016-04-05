@@ -1,9 +1,7 @@
 package com.fastrepair.dao.impl;
 
 import com.fastrepair.dao.StaffDao;
-import com.fastrepair.model.Company;
-import com.fastrepair.model.Department;
-import com.fastrepair.model.Staff;
+import com.fastrepair.model.*;
 import com.fastrepair.util.DepartmentType;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
@@ -34,7 +32,11 @@ public class StaffDaoImpl implements StaffDao {
 
 
     public void save(Staff staff) {
-        hibernateTemplate.save(staff);
+        if (staff instanceof Specialist) {
+            hibernateTemplate.save((Specialist)staff);
+        } else {
+            hibernateTemplate.save((Employee)staff);
+        }
     }
 
     public boolean checkUserExistsWithName(String name) {

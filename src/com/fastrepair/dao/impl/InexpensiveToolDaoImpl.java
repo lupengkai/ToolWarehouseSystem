@@ -34,4 +34,10 @@ public class InexpensiveToolDaoImpl implements InexpensiveToolDao {
     public void add(InexpensiveTool inexpensiveTool) {
         hibernateTemplate.save(inexpensiveTool);
     }
+
+
+    @Override
+    public List<InexpensiveTool> getStaffTools(int staffid) {
+       return (List<InexpensiveTool>)hibernateTemplate.find("from InexpensiveTool it where it.staff.id=?",staffid);
+    }
 }

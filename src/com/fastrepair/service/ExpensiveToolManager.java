@@ -41,4 +41,15 @@ public class ExpensiveToolManager {
     public List<ExpensiveTool> getDepartmentTool(Department department) {
         return expensiveToolDao.getDepartmentTool(department);
     }
+
+    public boolean isRequestStaff(int staffid, int toolid) {
+        return  expensiveToolDao.isRequestStaff(staffid,toolid);
+    }
+
+
+    public List<ExpensiveTool> getStaffTools(int staffid) {
+        return expensiveToolDao.getStaffTools(staffid);
+    }
+
+
 }

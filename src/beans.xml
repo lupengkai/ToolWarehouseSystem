@@ -76,7 +76,11 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
     <bean name="inexpensiveToolManager" class="com.fastrepair.service.InexpensiveToolManager">
         <property name="inexpensiveToolDao" ref="inexpensiveToolDao"/>
     </bean>
+    <bean name="toolDao" class="com.fastrepair.dao.impl.ToolDaoImpl"></bean>
 
+<bean name="toolManager" class="com.fastrepair.service.ToolManager">
+    <property name="toolDao" ref="toolDao"/>
+</bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
@@ -118,7 +122,7 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
             <tx:method name="add*" propagation="REQUIRED"/>
             <tx:method name="delete*" propagation="REQUIRED"/>
             <tx:method name="update*" propagation="REQUIRED"/>
-            <tx:method name="validate*" propagation="REQUIRED"/>
+            <tx:method name="*" propagation="REQUIRED"/>
 
         </tx:attributes>
     </tx:advice>

@@ -57,12 +57,12 @@
 
 
     <package name="ETMS" namespace="/ETMS" extends="struts-default">
-        <action name="Expensivetools_show">
+        <action name="Expensivetools_show" class="com.fastrepair.action.StaffToolsListAction" method="expensive">
             <result>
                 /ExpensiveTools_show.jsp
             </result>
         </action>
-        <action name="Inexpensivetools_show">
+        <action name="Inexpensivetools_show" class="com.fastrepair.action.StaffToolsListAction" method="inexpensive">
             <result>
                 /InexpensiveTools_show.jsp
             </result>
@@ -96,37 +96,20 @@
                 /admin/tools_add_ok.jsp
             </result>
         </action>
-        
-        
-        
-        
-        <action name="Expensivetools_manage">
-            <result>
-                /admin/Expensivetools_manage.jsp
-            </result>
+        <action name="tools_register" class="com.fastrepair.action.ToolOutAction" method="register">
+            <result>/admin/OK.jsp</result>
+            <result name="error">/admin/error.jsp</result>
+        </action><action name="tools_lend" class="com.fastrepair.action.ToolOutAction" method="lend">
+            <result>/admin/OK.jsp</result>
+            <result name="error">/admin/error.jsp</result>
         </action>
 
-        <action name="Inexpensivetools_manage">
-            <result>
-                /admin/Inexpensivetools_manage.jsp
-            </result>
-        </action>
-
-
-        <action name="Expensivetools_lend">
-            <result>
-                /admin/Expensivetools_lend.jsp
-            </result>
-
-        </action>
-
-        <action name="Inexpensivetools_lend">
-            <result>
-                /admin/Inexpensivetools_lend.jsp
-            </result>
-        </action>
     </package>
-
+<package name="WMSManage" namespace="/WMS/manage" extends="struts-default">
+    <action name="*" class="com.fastrepair.action.ToolManageAction" method="{1}">
+        <result>/admin/{1}.jsp</result>
+    </action>
+</package>
 
 
 

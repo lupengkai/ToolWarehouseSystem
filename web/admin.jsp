@@ -27,12 +27,13 @@
 <div id="content">
     <div class="left_menu">
         <ul id="nav_dot">
+            <s:debug/>
             <li>
                 <h4 class="M1"><span></span>Tools</h4>
                 <div class="list-item none">
-                    <a href="/ETMS/InexpensiveTools_show" target="menuFrame">Inexpensive tools </a>
-                    <a href="/ETMS/ExpensiveTools_show" target="menuFrame">Expensive tools</a>
-                    <a href="/ETMS/ExpensiveTools_request">Request Expensive tools</a>
+                    <a href='/ETMS/Inexpensivetools_show?staffid=<s:property value="staff.id"/>' target="menuFrame">Inexpensive tools </a>
+                    <a href='/ETMS/Expensivetools_show?staffid=<s:property value="staff.id"/>' target="menuFrame">Expensive tools</a>
+                    <a href='/ETMS/Expensivetools_request?staffid=<s:property value="staff.id"/>' target="menuFrame">Request Expensive tools</a>
                 </div>
             </li>
             <li>
