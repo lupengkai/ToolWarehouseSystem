@@ -1,17 +1,24 @@
 package com.fastrepair.action;
 
-import com.fastrepair.model.Recorder;
 import com.fastrepair.service.RecorderManager;
 import com.fastrepair.service.ToolManager;
 import com.opensymphony.xwork2.ActionSupport;
-import org.springframework.orm.hibernate5.HibernateTemplate;
 
 /**
  * Created by tage on 4/5/16.
  */
-public class ToolManageAction extends ActionSupport {
+public class ToolCancellationAction extends ActionSupport {
     private String toolid;
     private RecorderManager recorderManager;
+    private String staffid;
+
+    public String getStaffid() {
+        return staffid;
+    }
+
+    public void setStaffid(String staffid) {
+        this.staffid = staffid;
+    }
 
     public RecorderManager getRecorderManager() {
         return recorderManager;
@@ -40,10 +47,10 @@ public class ToolManageAction extends ActionSupport {
     }
 
 
-    public String delete() {
+    public String execute() {
 
-        toolManager.delete(Integer.parseInt(toolid));
-
+        toolManager.cancellation(Integer.parseInt(toolid));
+        recorderManager.cancellation(Integer.parseInt(staffid),Integer.parseInt(toolid));
 
 
 
@@ -51,13 +58,6 @@ public class ToolManageAction extends ActionSupport {
         return SUCCESS;
     }
 
-    public String lend() {
-        return SUCCESS;
-    }
-
-    public String register() {
-        return SUCCESS;
-    }
 
 
 }

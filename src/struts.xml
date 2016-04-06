@@ -75,18 +75,28 @@
 
         <action name="request" class="com.fastrepair.action.RaiseRequestAction">
             <result name="success">
-                    /Request_ok.jsp
+                /Request_ok.jsp
             </result>
             <result name="error">
-                    /Request_error.jsp
+                /Request_error.jsp
             </result>
         </action>
-
+        <action name="cancellation" class="com.fastrepair.action.ToolCancellationAction">
+            <result>
+                /Delete_ok.jsp
+            </result>
+        </action>
     </package>
 
 
+    <package name="ETMSRecord" namespace="/ETMS/record" extends="struts-default">
+        <action name="*" class="com.fastrepair.action.StaffRecordShow" method="{1}">
+            <result>/Recorder_show.jsp</result>
+        </action>
+    </package>
+
     <package name="WMS" namespace="/WMS" extends="struts-default">
-        
+
         <action name="tools" class="com.fastrepair.action.ToolsListAction">
             <result>
                 /admin/tools_list.jsp
@@ -99,7 +109,7 @@
                 /admin/tools_add_input.jsp
             </result>
         </action>
-        
+
         <action name="tools_add" class="com.fastrepair.action.ToolAddAction">
             <result>
                 /admin/tools_add_ok.jsp
@@ -108,18 +118,18 @@
         <action name="tools_register" class="com.fastrepair.action.ToolOutAction" method="register">
             <result>/admin/OK.jsp</result>
             <result name="error">/admin/error.jsp</result>
-        </action><action name="tools_lend" class="com.fastrepair.action.ToolOutAction" method="lend">
+        </action>
+        <action name="tools_lend" class="com.fastrepair.action.ToolOutAction" method="lend">
             <result>/admin/OK.jsp</result>
             <result name="error">/admin/error.jsp</result>
         </action>
 
     </package>
-<package name="WMSManage" namespace="/WMS/manage" extends="struts-default">
-    <action name="*" class="com.fastrepair.action.ToolManageAction" method="{1}">
-        <result>/admin/{1}.jsp</result>
-    </action>
-</package>
-
+    <package name="WMSManage" namespace="/WMS/manage" extends="struts-default">
+        <action name="*" class="com.fastrepair.action.ToolManageAction" method="{1}">
+            <result>/admin/{1}.jsp</result>
+        </action>
+    </package>
 
 
 </struts>

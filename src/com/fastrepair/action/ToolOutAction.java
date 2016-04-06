@@ -4,6 +4,7 @@ import com.fastrepair.model.Employee;
 import com.fastrepair.model.Specialist;
 import com.fastrepair.model.Staff;
 import com.fastrepair.service.ExpensiveToolManager;
+import com.fastrepair.service.RecorderManager;
 import com.fastrepair.service.StaffManager;
 import com.fastrepair.service.ToolManager;
 import com.opensymphony.xwork2.ActionSupport;
@@ -16,7 +17,16 @@ public class ToolOutAction extends ActionSupport {
     private String toolid;
     private String username;
     private String password;
-private ExpensiveToolManager expensiveToolManager;
+    private ExpensiveToolManager expensiveToolManager;
+    private RecorderManager recorderManager;
+
+    public RecorderManager getRecorderManager() {
+        return recorderManager;
+    }
+
+    public void setRecorderManager(RecorderManager recorderManager) {
+        this.recorderManager = recorderManager;
+    }
 
     public ExpensiveToolManager getExpensiveToolManager() {
         return expensiveToolManager;
@@ -79,10 +89,13 @@ private ExpensiveToolManager expensiveToolManager;
             staff = staffManager.loadByName(username);
             if (staff instanceof Specialist) {//specialist
                 toolManager.register(id, staff.getId());
+                recorderManager.reigster(staff.getId(),id);
+
                 return SUCCESS;
             } else {//employee
                 if (toolManager.sameDepartment(staff.getId(), id)) {
                     toolManager.register(id, staff.getId());
+                    recorderManager.reigster(staff.getId(),id);
                     return SUCCESS;
                 }
             }
@@ -104,7 +117,8 @@ private ExpensiveToolManager expensiveToolManager;
             staff = staffManager.loadByName(username);
             int id = Integer.parseInt(toolid);
             if (expensiveToolManager.isRequestStaff(staff.getId(), id)) {
-                expensiveToolManager.lend(id,staff.getId());
+                expensiveToolManager.lend(id, staff.getId());
+                recorderManager.lendApprovedD(staff.getId(),id);
                 return SUCCESS;
             }
         }

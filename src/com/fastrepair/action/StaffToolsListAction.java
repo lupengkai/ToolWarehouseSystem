@@ -66,7 +66,7 @@ public class StaffToolsListAction extends ActionSupport{
 
     public String inexpensive() {
 System.out.print(staffid);
-        inexpensiveTools = inexpensiveToolManager.getStaffTools(Integer.parseInt(staffid));
+        inexpensiveTools = inexpensiveToolManager.getStaffGoodTools(Integer.parseInt(staffid));
 
 
         return SUCCESS;

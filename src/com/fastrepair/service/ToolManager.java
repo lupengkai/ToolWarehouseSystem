@@ -1,6 +1,8 @@
 package com.fastrepair.service;
 
 import com.fastrepair.dao.ToolDao;
+import com.fastrepair.model.Tool;
+import com.fastrepair.util.ToolState;
 
 /**
  * Created by tage on 4/5/16.
@@ -31,5 +33,11 @@ private ToolDao toolDao;
 
     public boolean sameDepartment(int staffid, int toolid) {
         return toolDao.sameDepartment(staffid, toolid);
+    }
+
+    public void cancellation(int toolId) {
+        Tool tool = toolDao.load(toolId);
+        tool.setToolState(ToolState.DAMAGED);
+        toolDao.update(tool);
     }
 }

@@ -39,11 +39,11 @@
             <li>
                 <h4 class="M2"><span></span>Record</h4>
                 <div class="list-item none">
-                    <a href=''>Staff_Request</a>
-                    <a href=''>Lend</a>
-                    <a href=''>Register</a>
-                    <a href=''>Cancellation</a>
-                    <a href=''>Revert</a>
+                    <a href='/ETMS/record/request?staffid=<s:property value="staff.id"/>' target="menuFrame">Request</a>
+                    <a href='/ETMS/record/lend?staffid=<s:property value="staff.id"/>' target="menuFrame">Lend</a>
+                    <a href='/ETMS/record/register?staffid=<s:property value="staff.id"/>' target="menuFrame">Register</a>
+                    <a href='/ETMS/record/cancellation?staffid=<s:property value="staff.id"/>' target="menuFrame">Cancellation</a>
+                    <a href='' target="menuFrame">Revert</a>
                 </div>
             </li>
 

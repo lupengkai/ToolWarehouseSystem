@@ -16,6 +16,7 @@ http://www.springframework.org/schema/aop
 http://www.springframework.org/schema/aop/spring-aop.xsd">
     <context:annotation-config/>
     <context:component-scan base-package="com.fastrepair"/>
+    <aop:aspectj-autoproxy/>
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"><!--处理占位符-->
         <property name="locations" value="classpath:jdbc.properties"/>
@@ -89,6 +90,16 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
         <property name="employeeDao" ref="employeeDao"/>
     </bean>
 
+
+    <bean name="recorderManager" class="com.fastrepair.service.RecorderManager">
+        <property name="recorderDao" ref="recorderDao"/>
+    </bean>
+    <bean name="recorderDao" class="com.fastrepair.dao.impl.RecorderDaoImpl"/>
+
+
+
+
+
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="packagesToScan">    <!-- hibernate map-->
@@ -117,10 +128,16 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
     </bean>
 
 
+
+
+
+
     <aop:config>
+
         <aop:pointcut id="businessService"
                       expression="execution(public * com.fastrepair.service.*.*(..))"></aop:pointcut>
         <aop:advisor pointcut-ref="businessService" advice-ref="txAdvice"/>
+
     </aop:config>
 
     <tx:advice id="txAdvice" transaction-manager="txManager">

@@ -70,9 +70,9 @@
                 <s:if test='toolState.toString() == "FREE"'>
                 <a href="/WMS/manage/register?toolid=<s:property value="id"/>">register</a>
                 </s:if>
-                <s:if test='toolState.toString() == "FREE" || toolState.toString() == "DAMAGED"'>
+              <%--  <s:if test='toolState.toString() == "FREE" || toolState.toString() == "DAMAGED"'>
                 <a href="/WMS/manage/delete?toolid=<s:property value="id"/>">delete</a>
-                </s:if>
+                </s:if>--%>
             </td>
         </tr>
     </s:iterator>

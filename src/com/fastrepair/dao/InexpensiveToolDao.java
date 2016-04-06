@@ -14,4 +14,6 @@ public interface InexpensiveToolDao {
    public   void add(InexpensiveTool inexpensiveTool);
 
   public  List<InexpensiveTool> getStaffTools(int staffid);
+
+   public  List<InexpensiveTool> getStaffGoodTools(int staffid);
 }

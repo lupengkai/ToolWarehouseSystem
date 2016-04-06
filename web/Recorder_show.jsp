@@ -2,8 +2,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: tage
-  Date: 4/4/16
-  Time: 8:12 PM
+  Date: 4/6/16
+  Time: 6:51 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
@@ -31,40 +31,35 @@
 </head>
 
 <body>
-
-<h4>Expensive Tool</h4>
 <table border="2">
     <tr>
         <th>
-            id
+            ID
         </th>
-        <th>name</th>
-        <th>price</th>
-        <th>Operation</th>
+        <th>TIME</th>
+        <th>Tool ID</th>
+        <th>
+            Tool Name
+        </th>
     </tr>
-    <s:iterator value="expensiveToolList" id="tools">
+    <s:iterator value="recorderList">
         <tr>
             <td>
                 <s:property value="id"/>
             </td>
             <td>
-                <s:property value="name"/>
+                <s:property value="timestamp"/>
             </td>
             <td>
-                <s:property value="price"/>
+                <s:property value="tool.id"/>
             </td>
-
-
             <td>
-                    <a href="/ETMS/request?toolid=<s:property value="#tools.id"/>&&staffid=<s:property value="staffid"/>">Request</a>
-
+                <s:property value="tool.name"/>
             </td>
         </tr>
     </s:iterator>
 </table>
 
 <s:debug/>
-
-
 </body>
 </html>

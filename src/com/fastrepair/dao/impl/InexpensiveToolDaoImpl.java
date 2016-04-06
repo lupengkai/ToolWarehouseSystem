@@ -3,6 +3,7 @@ package com.fastrepair.dao.impl;
 import com.fastrepair.dao.InexpensiveToolDao;
 import com.fastrepair.model.Department;
 import com.fastrepair.model.InexpensiveTool;
+import com.fastrepair.util.ToolState;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 import javax.annotation.Resource;
@@ -39,5 +40,10 @@ public class InexpensiveToolDaoImpl implements InexpensiveToolDao {
     @Override
     public List<InexpensiveTool> getStaffTools(int staffid) {
        return (List<InexpensiveTool>)hibernateTemplate.find("from InexpensiveTool it where it.staff.id=?",staffid);
+    }
+
+    @Override
+    public List<InexpensiveTool> getStaffGoodTools(int staffid) {
+        return (List<InexpensiveTool>)hibernateTemplate.find("from InexpensiveTool it where it.staff.id=? and it.toolState=?",staffid, ToolState.OUT);
     }
 }

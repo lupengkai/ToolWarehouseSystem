@@ -62,4 +62,14 @@ public class ToolDaoImpl implements ToolDao {
 
         return false;
     }
+
+    @Override
+    public Tool load(int toolId) {
+        return hibernateTemplate.get(Tool.class,toolId);
+    }
+
+    @Override
+    public void update(Tool tool) {
+        hibernateTemplate.update(tool);
+    }
 }

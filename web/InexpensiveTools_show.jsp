@@ -57,7 +57,7 @@
 
 
             <td>
-                    <a href="/WMS/manage/delete?toolid=<s:property value="id"/>">Cancellation</a>
+                    <a href="/ETMS/cancellation?toolid=<s:property value="id"/>&&staffid=<s:property value="staffid"/>">Cancellation</a>
             </td>
         </tr>
     </s:iterator>

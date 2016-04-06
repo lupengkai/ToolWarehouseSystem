@@ -34,4 +34,8 @@ public class InexpensiveToolManager {
     public List<InexpensiveTool> getStaffTools(int staffid) {
         return inexpensiveToolDao.getStaffTools(staffid);
     }
+
+    public List<InexpensiveTool> getStaffGoodTools(int staffid) {
+        return  inexpensiveToolDao.getStaffGoodTools(staffid);
+    }
 }
