@@ -3,6 +3,7 @@ package com.fastrepair.service;
 import com.fastrepair.dao.ExpensiveToolDao;
 import com.fastrepair.model.Department;
 import com.fastrepair.model.ExpensiveTool;
+import com.fastrepair.util.DepartmentType;
 
 import java.util.List;
 
@@ -52,4 +53,19 @@ public class ExpensiveToolManager {
     }
 
 
+    public List<ExpensiveTool> getDepartmentFreeTool(DepartmentType departmentType) {
+        return expensiveToolDao.getDepartmentFreeTool(departmentType);
+    }
+
+    public List<ExpensiveTool> getFreeTool() {
+        return expensiveToolDao.getFreeTool();
+    }
+
+    public boolean request(int staffid, int toolid) {
+        return expensiveToolDao.request(staffid,toolid);
+    }
+
+    public void lend(int toolid, int staffid) {
+        expensiveToolDao.lend(toolid, staffid);
+    }
 }

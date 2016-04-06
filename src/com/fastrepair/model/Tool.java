@@ -9,14 +9,23 @@ import javax.persistence.*;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Tool {
+public class    Tool {
     private int id;
     private String name;
     private Department department;
     private double price;
     private Staff staff;
     private ToolState toolState;
+    private int version;
 
+   @Version//乐观锁
+    public int getVersion() {
+        return version;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
+    }
 
     public ToolState getToolState() {
         return toolState;

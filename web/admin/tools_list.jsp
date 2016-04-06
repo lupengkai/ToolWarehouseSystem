@@ -88,6 +88,7 @@
         <th>price</th>
         <th>tool state</th>
         <th>staff</th>
+        <th>Request Staff</th>
         <th>Operation</th>
     </tr>
     <s:iterator value="expensiveToolList">
@@ -108,6 +109,10 @@
 
             <td>
                 <s:property value="staff.name"/>
+            </td>
+
+            <td>
+                <s:property value="requestStaff.name"/>
             </td>
             <td>
                 <s:if test='toolState.toString() == "REQUESTING"'>

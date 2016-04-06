@@ -1,6 +1,8 @@
 package com.fastrepair.service;
 
 import com.fastrepair.dao.StaffDao;
+import com.fastrepair.model.Employee;
+import com.fastrepair.model.Specialist;
 import com.fastrepair.model.Staff;
 
 /**
@@ -42,6 +44,18 @@ public class StaffManager {
 
     public Staff loadByName(String name) {
         return staffDao.loadByName(name);
+    }
+
+
+    public boolean isEmployee(int id) {
+       Staff staff =  staffDao.load(id);
+        return (staff instanceof Employee);
+
+    }
+
+    public boolean isSpecialist(int id) {
+        Staff staff =  staffDao.load(id);
+        return (staff instanceof Specialist);
     }
 
 

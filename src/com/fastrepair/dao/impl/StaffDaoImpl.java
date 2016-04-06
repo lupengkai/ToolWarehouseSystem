@@ -57,4 +57,10 @@ public class StaffDaoImpl implements StaffDao {
             return false;
         }
     }
+
+
+    @Override
+    public Staff load(int id) {
+       return hibernateTemplate.get(Staff.class,id);
+    }
 }

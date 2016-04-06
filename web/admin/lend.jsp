@@ -31,6 +31,34 @@
 </head>
 
 <body>
+<form action="/WMS/tools_lend" method="post">
+    <input type="hidden" name="toolid" value="<s:property value="toolid"/>">
+    <table border="2">
+        <tr>
+            <td>
+                User Name:
+            </td>
+            <td>
+                <input type="text" name="username"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input type="password" name="password"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2"> <input type="submit"value="lend"> </td>
+        </tr>
+    </table>
+</form>
+
+
+
 <s:debug/>
 </body>
 </html>

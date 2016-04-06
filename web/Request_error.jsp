@@ -1,9 +1,8 @@
-<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: tage
-  Date: 4/4/16
-  Time: 8:12 PM
+  Date: 4/6/16
+  Time: 1:15 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
@@ -31,40 +30,6 @@
 </head>
 
 <body>
-
-<h4>Expensive Tool</h4>
-<table border="2">
-    <tr>
-        <th>
-            id
-        </th>
-        <th>name</th>
-        <th>price</th>
-        <th>Operation</th>
-    </tr>
-    <s:iterator value="expensiveToolList">
-        <tr>
-            <td>
-                <s:property value="id"/>
-            </td>
-            <td>
-                <s:property value="name"/>
-            </td>
-            <td>
-                <s:property value="price"/>
-            </td>
-
-
-            <td>
-                    <a href="/ETMS/request?toolid=<s:property value="id"/>&&staffid=<s:property value="staffid"/>">Request</a>
-
-            </td>
-        </tr>
-    </s:iterator>
-</table>
-
-<s:debug/>
-
 
 </body>
 </html>

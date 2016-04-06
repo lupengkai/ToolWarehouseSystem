@@ -12,4 +12,6 @@ public interface StaffDao {
 
    public boolean validate(Staff staff);
     public Staff loadByName(String name);
+
+    public Staff load(int id);
 }

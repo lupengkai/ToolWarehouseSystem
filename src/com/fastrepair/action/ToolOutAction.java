@@ -104,7 +104,7 @@ private ExpensiveToolManager expensiveToolManager;
             staff = staffManager.loadByName(username);
             int id = Integer.parseInt(toolid);
             if (expensiveToolManager.isRequestStaff(staff.getId(), id)) {
-                toolManager.lend(id,staff.getId());
+                expensiveToolManager.lend(id,staff.getId());
                 return SUCCESS;
             }
         }

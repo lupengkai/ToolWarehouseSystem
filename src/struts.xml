@@ -67,9 +67,18 @@
                 /InexpensiveTools_show.jsp
             </result>
         </action>
-        <action name="Expensivetools_request">
+        <action name="Expensivetools_request" class="com.fastrepair.action.ExpensiveToolsRequestAction">
             <result>
                 /Expensivetools_request.jsp
+            </result>
+        </action>
+
+        <action name="request" class="com.fastrepair.action.RaiseRequestAction">
+            <result name="success">
+                    /Request_ok.jsp
+            </result>
+            <result name="error">
+                    /Request_error.jsp
             </result>
         </action>
 
